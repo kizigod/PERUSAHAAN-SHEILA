@@ -3,22 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sewa Alat Alat Berat | Spesifikasi & Katalog Lengkap</title>
+    <title>PT. Sumatera Engineering Sejahtera | Sewa Cold Cutting Machine</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         :root {
-            --primary: #004a99; /* Blue Corporate */
-            --accent: #E67E22; /* Safety Orange */
-            --dark: #1e293b;
-            --light: #f8fafc;
-            --border: #e2e8f0;
+            /* TEMA WARNA BARU */
+            --primary: #5E3404; /* Cokelat Tua / Dark Orange */
+            --accent: #8c5008;  /* Warna aksen sedikit lebih terang dari primary */
+            --dark: #2a1702;    /* Cokelat sangat gelap untuk teks utama */
+            --light: #ffffff;   /* Putih murni untuk background */
+            --border: #e5d8cc;  /* Warna garis pembatas bernuansa cokelat muda */
             --white: #ffffff;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        
+        /* Mengubah warna background dasar menjadi putih */
         body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
 
         /* Navbar */
@@ -32,14 +35,47 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 4px 6px rgba(94, 52, 4, 0.05); /* Bayangan tipis */
         }
 
-        .logo { font-size: 1.4rem; font-weight: 800; color: var(--primary); }
-        .logo span { color: var(--accent); }
+        /* Pengaturan Layout Logo & Teks */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px; /* Jarak antara logo dan teks */
+        }
+
+        .nav-logo {
+            height: 45px; /* Ukuran tinggi logo, silakan disesuaikan */
+            width: auto;
+            object-fit: contain;
+        }
+
+        .logo-text { 
+            font-size: 1.2rem; 
+            font-weight: 800; 
+            color: var(--primary); 
+            line-height: 1.2;
+        }
+        
+        .logo-text span { 
+            color: var(--dark); /* Kata selanjutnya warna lebih gelap */
+        }
+
+        @media (max-width: 768px) {
+            .logo-text { font-size: 0.9rem; }
+            .nav-logo { height: 35px; }
+        }
+
+        /* Kontak Kanan Navbar */
+        .nav-contact {
+            font-size: 0.95rem; 
+            font-weight: 700;
+        }
 
         /* Hero */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+            background: linear-gradient(rgba(42, 23, 2, 0.75), rgba(94, 52, 4, 0.8)), 
                         url('https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1600&q=80') center/cover;
             color: white;
             padding: 80px 5%;
@@ -54,8 +90,9 @@
             background: black;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 25px -5px rgba(94, 52, 4, 0.2); /* Bayangan disesuaikan dengan tema */
             aspect-ratio: 16/9;
+            border: 3px solid var(--white);
         }
 
         /* Catalog Section */
@@ -67,7 +104,7 @@
             position: relative;
         }
         .section-title::after {
-            content: ''; display: block; width: 60px; height: 4px; background: var(--accent); margin: 10px auto;
+            content: ''; display: block; width: 60px; height: 4px; background: var(--primary); margin: 10px auto;
         }
 
         .catalog-grid {
@@ -84,27 +121,33 @@
             overflow: hidden;
             transition: 0.3s;
         }
-        .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px rgba(0,0,0,0.1); }
-        .product-img { height: 200px; background: #eee; display: flex; align-items: center; justify-content: center; }
+        .product-card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 10px 15px rgba(94, 52, 4, 0.1); 
+            border-color: var(--primary);
+        }
+        .product-img { height: 200px; background: #fdfaf7; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--border); }
         .product-info { padding: 20px; }
         .product-info h3 { color: var(--primary); margin-bottom: 10px; }
-        .product-info ul { list-style: none; font-size: 0.9rem; color: #64748b; }
+        .product-info ul { list-style: none; font-size: 0.9rem; color: #555; }
+        .text-accent { color: var(--primary); }
 
         /* Technical Table */
         .specs-container { overflow-x: auto; background: var(--white); padding: 20px; border-radius: 8px; border: 1px solid var(--border); }
         table { width: 100%; border-collapse: collapse; min-width: 600px; }
         th { background: var(--primary); color: white; padding: 12px; text-align: left; font-size: 0.9rem; }
         td { padding: 12px; border-bottom: 1px solid var(--border); font-size: 0.85rem; }
-        tr:nth-child(even) { background: #f1f5f9; }
+        tr:nth-child(even) { background: #fdfaf7; } /* Warna baris selang-seling */
 
         /* CTA */
         .cta-banner {
-            background: var(--dark);
+            background: var(--primary);
             color: white;
             padding: 50px 5%;
             text-align: center;
             border-radius: 12px;
             margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(94, 52, 4, 0.3);
         }
 
         .btn-wa {
@@ -118,21 +161,40 @@
             align-items: center;
             gap: 10px;
             margin-top: 20px;
+            transition: 0.3s;
         }
 
-        footer { background: #0f172a; color: #94a3b8; padding: 40px 5%; text-align: center; }
+        .btn-wa:hover {
+            background: #1DA851;
+            transform: translateY(-2px);
+        }
+
+        footer { 
+            background: var(--dark); 
+            color: #d1c5b8; 
+            padding: 40px 5%; 
+            text-align: center; 
+            border-top: 4px solid var(--primary);
+        }
     </style>
 </head>
 <body>
 
     <nav>
-    <div class="logo">PT.<span> SUMATERA ENGINEERING SEJAHTERA </span></div>
-    <div style="font-size: 0.9rem; font-weight: 600;">
-        <a href="https://wa.me/6281376343556?text=Halo%20PT.%20Sumatera%20Engineering%20Sejahtera,%20saya%20ingin%20bertanya%20seputar%20sewa%20Cold%20Cutting%20Machine." target="_blank" style="text-decoration: none; color: var(--dark);">
-            <i class="fa fa-phone color-accent"></i> +62 813-7634-3556
-        </a>
-    </div>
-</nav>
+        <div class="logo-container">
+            <img src="logo-pt-1.png" alt="Logo PT Sumatera Engineering Sejahtera" class="nav-logo">
+            
+            <div class="logo-text">
+                PT. <span>SUMATERA ENGINEERING SEJAHTERA</span>
+            </div>
+        </div>
+
+        <div class="nav-contact">
+            <a href="https://wa.me/6281376343556?text=Halo%20PT.%20Sumatera%20Engineering%20Sejahtera,%20saya%20ingin%20bertanya%20seputar%20sewa%20Cold%20Cutting%20Machine." target="_blank" style="text-decoration: none; color: var(--primary);">
+                <i class="fa fa-phone"></i> +62 813-7634-3556
+            </a>
+        </div>
+    </nav>
 
     <header class="hero">
         <h1 style="font-size: 2.5rem; margin-bottom: 10px;">PT. SUMATERA ENGINEERING SEJAHTERA</h1>
@@ -149,7 +211,7 @@
             <div class="catalog-grid">
                 
                 <div class="product-card">
-                    <div class="product-img"><i class="fa fa-gear fa-4x" style="color:#ccc"></i></div>
+                    <div class="product-img"><i class="fa fa-gear fa-4x" style="color:#d1c5b8"></i></div>
                     <div class="product-info">
                         <h3>Small Series (2" - 6")</h3>
                         <ul>
@@ -161,7 +223,7 @@
                 </div>
 
                 <div class="product-card">
-                    <div class="product-img"><i class="fa fa-gear fa-5x" style="color:#ccc"></i></div>
+                    <div class="product-img"><i class="fa fa-gear fa-5x" style="color:#d1c5b8"></i></div>
                     <div class="product-info">
                         <h3>Medium Series (6" - 24")</h3>
                         <ul>
@@ -173,7 +235,7 @@
                 </div>
 
                 <div class="product-card">
-                    <div class="product-img"><i class="fa fa-gear fa-6x" style="color:#ccc"></i></div>
+                    <div class="product-img"><i class="fa fa-gear fa-6x" style="color:#d1c5b8"></i></div>
                     <div class="product-info">
                         <h3>Large Series (24" - 48")</h3>
                         <ul>
@@ -235,15 +297,15 @@
         <div class="cta-banner">
             <h2>Butuh Penawaran Sewa untuk Proyek Anda?</h2>
             <p>Kami melayani penyewaan unit harian, mingguan, maupun bulanan untuk area Medan dan sekitarnya.</p>
-            <a href="https://wa.me/6281376343556" class="btn-wa">
+            <a href="https://wa.me/6281376343556?text=Halo%20PT.%20Sumatera%20Engineering%20Sejahtera,%20saya%20ingin%20meminta%20penawaran%20harga%20sewa%20Cold%20Cutting%20Machine." class="btn-wa">
                 <i class="fab fa-whatsapp"></i> Hubungi Technical Support Sekarang
             </a>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2026 Spesialis Sewa Cold Cutting Medan.</p>
-        <p style="font-size: 0.8rem; margin-top: 10px;">#sewaalatberatmedan #coldcutting #pipingengineering #proyekmedan</p>
+        <p>&copy; 2026 PT. Sumatera Engineering Sejahtera. All Rights Reserved.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px; color: var(--accent);">#sewaalatberatmedan #coldcutting #pipingengineering #proyekmedan</p>
     </footer>
 
 </body>
