@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sewa Alat Alat Berat | Spesifikasi & Katalog Lengkap</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #004a99; /* Blue Corporate */
+            --accent: #E67E22; /* Safety Orange */
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --border: #e2e8f0;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
+
+        /* Navbar */
+        nav {
+            background: var(--white);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--primary);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo { font-size: 1.4rem; font-weight: 800; color: var(--primary); }
+        .logo span { color: var(--accent); }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1600&q=80') center/cover;
+            color: white;
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        /* Video Section */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        
+        .video-wrapper {
+            margin: -60px auto 40px;
+            background: black;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+            aspect-ratio: 16/9;
+        }
+
+        /* Catalog Section */
+        .section-padding { padding: 60px 0; }
+        .section-title { 
+            text-align: center; 
+            margin-bottom: 40px; 
+            font-size: 2rem;
+            position: relative;
+        }
+        .section-title::after {
+            content: ''; display: block; width: 60px; height: 4px; background: var(--accent); margin: 10px auto;
+        }
+
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+        .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px rgba(0,0,0,0.1); }
+        .product-img { height: 200px; background: #eee; display: flex; align-items: center; justify-content: center; }
+        .product-info { padding: 20px; }
+        .product-info h3 { color: var(--primary); margin-bottom: 10px; }
+        .product-info ul { list-style: none; font-size: 0.9rem; color: #64748b; }
+
+        /* Technical Table */
+        .specs-container { overflow-x: auto; background: var(--white); padding: 20px; border-radius: 8px; border: 1px solid var(--border); }
+        table { width: 100%; border-collapse: collapse; min-width: 600px; }
+        th { background: var(--primary); color: white; padding: 12px; text-align: left; font-size: 0.9rem; }
+        td { padding: 12px; border-bottom: 1px solid var(--border); font-size: 0.85rem; }
+        tr:nth-child(even) { background: #f1f5f9; }
+
+        /* CTA */
+        .cta-banner {
+            background: var(--dark);
+            color: white;
+            padding: 50px 5%;
+            text-align: center;
+            border-radius: 12px;
+            margin: 40px 0;
+        }
+
+        .btn-wa {
+            background: #25D366;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        footer { background: #0f172a; color: #94a3b8; padding: 40px 5%; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <nav>
+    <div class="logo">PT.<span> SUMATERA ENGINEERING SEJAHTERA </span></div>
+    <div style="font-size: 0.9rem; font-weight: 600;">
+        <a href="https://wa.me/6281376343556?text=Halo%20PT.%20Sumatera%20Engineering%20Sejahtera,%20saya%20ingin%20bertanya%20seputar%20sewa%20Cold%20Cutting%20Machine." target="_blank" style="text-decoration: none; color: var(--dark);">
+            <i class="fa fa-phone color-accent"></i> +62 813-7634-3556
+        </a>
+    </div>
+</nav>
+
+    <header class="hero">
+        <h1 style="font-size: 2.5rem; margin-bottom: 10px;">PT. SUMATERA ENGINEERING SEJAHTERA</h1>
+        <p style="font-size: 1.2rem; opacity: 0.9;">Penyewaan Mesin Cold Cutting Pipa Portable di Medan</p>
+    </header>
+
+    <div class="container">
+        <div class="video-wrapper">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <section class="section-padding">
+            <h2 class="section-title">Katalog Alat Tersedia</h2>
+            <div class="catalog-grid">
+                
+                <div class="product-card">
+                    <div class="product-img"><i class="fa fa-gear fa-4x" style="color:#ccc"></i></div>
+                    <div class="product-info">
+                        <h3>Small Series (2" - 6")</h3>
+                        <ul>
+                            <li><i class="fa fa-check text-accent"></i> Ringan & Mudah dibawa</li>
+                            <li><i class="fa fa-check text-accent"></i> Untuk ruang sempit</li>
+                            <li><i class="fa fa-check text-accent"></i> Power: Pneumatic / Electric</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img"><i class="fa fa-gear fa-5x" style="color:#ccc"></i></div>
+                    <div class="product-info">
+                        <h3>Medium Series (6" - 24")</h3>
+                        <ul>
+                            <li><i class="fa fa-check text-accent"></i> Standar Proyek Migas</li>
+                            <li><i class="fa fa-check text-accent"></i> Split-frame design</li>
+                            <li><i class="fa fa-check text-accent"></i> Power: Hydraulic / Pneumatic</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img"><i class="fa fa-gear fa-6x" style="color:#ccc"></i></div>
+                    <div class="product-info">
+                        <h3>Large Series (24" - 48")</h3>
+                        <ul>
+                            <li><i class="fa fa-check text-accent"></i> Heavy Duty Cutting</li>
+                            <li><i class="fa fa-check text-accent"></i> Presisi tinggi pada diameter besar</li>
+                            <li><i class="fa fa-check text-accent"></i> Power: High-Torque Hydraulic</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <h2 class="section-title">Informasi Teknis (Technical Data)</h2>
+            <div class="specs-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Model Mesin</th>
+                            <th>Range Diameter (Inch)</th>
+                            <th>Tebal Dinding (Max)</th>
+                            <th>Tipe Penggerak</th>
+                            <th>Aplikasi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>PM-SF-06</td>
+                            <td>2" - 6"</td>
+                            <td>25 mm</td>
+                            <td>Electric / Pneumatic</td>
+                            <td>Pemeliharaan Kilang</td>
+                        </tr>
+                        <tr>
+                            <td>PM-SF-12</td>
+                            <td>6" - 12"</td>
+                            <td>30 mm</td>
+                            <td>Pneumatic / Hydraulic</td>
+                            <td>Konstruksi Pipa Gas</td>
+                        </tr>
+                        <tr>
+                            <td>PM-SF-24</td>
+                            <td>12" - 24"</td>
+                            <td>45 mm</td>
+                            <td>Hydraulic</td>
+                            <td>Instalasi Pipa Utama</td>
+                        </tr>
+                        <tr>
+                            <td>PM-SF-48</td>
+                            <td>24" - 48"</td>
+                            <td>60 mm</td>
+                            <td>High-Torque Hydraulic</td>
+                            <td>Proyek Lepas Pantai</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <div class="cta-banner">
+            <h2>Butuh Penawaran Sewa untuk Proyek Anda?</h2>
+            <p>Kami melayani penyewaan unit harian, mingguan, maupun bulanan untuk area Medan dan sekitarnya.</p>
+            <a href="https://wa.me/6281376343556" class="btn-wa">
+                <i class="fab fa-whatsapp"></i> Hubungi Technical Support Sekarang
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Spesialis Sewa Cold Cutting Medan.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">#sewaalatberatmedan #coldcutting #pipingengineering #proyekmedan</p>
+    </footer>
+
+</body>
+</html>
